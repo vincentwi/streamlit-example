@@ -2,7 +2,7 @@ altair
 pandas
 streamlit
 click==8
-vega_datasets
 numpy
 matplotlib
 seaborn
+PIL
