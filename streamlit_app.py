@@ -3,6 +3,9 @@ import altair as alt
 import math
 import pandas as pd
 import streamlit as st
+from PIL import image
+import numpy as np
+import matplotlib.pyplot as plt
 
 """
 # Cross Sectional Child Income Statistics by College Tier and Parent Income Percentile
@@ -20,12 +23,9 @@ submitted to the United States Internal Revenue Service (IRS) by a student/their
 
 ## Figure 1: 
 """
-image = Image.open("img/Post-grad-parent-earning-by-tier.png") #Image name
-fig = plt.figure()
-plt.imshow(image)
-plt.axis("off")
-st.pyplot(fig)
 
+image = Image.open("img/Post-grad-parent-earning-by-tier.png")
+st.image(image, caption="Post-grad-parent-earning-by-tier") #Image name
 
 """
 ## Figure X: 
@@ -42,6 +42,7 @@ fig = plt.figure()
 plt.imshow(image)
 plt.axis("off")
 st.pyplot(fig)
+
 
 # with st.echo(code_location='below'):
     # total_points = st.slider("Number of points in spiral", 1, 5000, 2000)
