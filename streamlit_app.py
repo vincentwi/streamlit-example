@@ -23,14 +23,14 @@ submitted to the United States Internal Revenue Service (IRS) by a student/their
 
 ## Figure 1: Post Graduation Parent's Earning by Tier
 """
-option = st.selectbox(
+f1option = st.selectbox(
      'View figure by ',
      ('Values', 'Percentile'))
 
-st.write('You selected:', option)
+st.write('You selected:', f1option)
 
-if option == 'Values': image = Image.open("img/Post-grad-parent-earning-by-tier.png")
-elif option == 'Percentile': image = Image.open("img/Post-Grad Earnings Percinetile by Tier.png")
+if f1option == 'Values': image = Image.open("img/Post-grad-parent-earning-by-tier.png")
+elif f1option == 'Percentile': image = Image.open("img/Post-Grad Earnings Percinetile by Tier.png")
 
 st.image(image, caption="Post Graduation Parent's Earning by Tier") #Image name
 
@@ -42,14 +42,14 @@ If the kids go to a strong school, what is their income?
 
 ## Figure 2: Post Graduation Student Earnings by Tier
 """
-option = st.selectbox(
+f2option = st.selectbox(
      'View figure by ',
      ('Values', 'Percentile'))
 
-st.write('You selected:', option)
+st.write('You selected:', f2option)
 
-if option == 'Values': image = Image.open("img/Post-grad-earning-by-tier.png")
-elif option == 'Percentile': image = Image.open("img/Post-Grad Earnings Percinetile by Tier.png")
+if f2option == 'Values': image = Image.open("img/Post-grad-earning-by-tier.png")
+elif f2option == 'Percentile': image = Image.open("img/Post-Grad Earnings Percinetile by Tier.png")
 
 st.image(image, caption="Post Graduation Student Earnings by Tier")
 
@@ -86,7 +86,7 @@ that lower income families are less often entering selective universties.
 
 ## Figure 4:  Relationship between Partents Mean Income and Kids Income
 """
-option = st.selectbox(
+f4option = st.selectbox(
      'View figure by ',
      (  '(0) All'
         '(1) Ivy Plus', 
@@ -105,24 +105,24 @@ option = st.selectbox(
         '(14) Late attender (23-28)',
         '(15) Never attended college (before 2013)'))
 
-st.write('You selected:', option)
+st.write('You selected:', f4option)
 
-if option == '(0) All': image = Image.open("img/Kids_Parents_income correlation_per_school/Relationship between Parents Mean Income and Kids Median Income.png")
-elif option == '(1) Ivy Plus': image = Image.open("img/Kids_Parents_income correlation_per_school/(1) Ivy Plus.png") 
-elif option == '(2) Other elite schools (public and private)': image = Image.open("img/Kids_Parents_income correlation_per_school/(2) Other elite schools (private and public).png")
-elif option == '(3) Highly selective public': image = Image.open("img/Kids_Parents_income correlation_per_school/(3)Highly selective public.png")
-elif option == '(4) Highly selective private': image = Image.open("img/Kids_Parents_income correlation_per_school/(4) Highly selected private.png")
-elif option == '(5) Selective public': image = Image.open("img/Kids_Parents_income correlation_per_school/(5) Selective public.png")
-elif option == '(6) Selective private': image = Image.open("img/Kids_Parents_income correlation_per_school/(6) Selective private.png")
-elif option == '(7) Nonselective four-year public': image = Image.open("img/Kids_Parents_income correlation_per_school/(7) Nonselective four-year public.png")
-elif option == '(8) Nonselective four-year private not for profit': image = Image.open("img/Kids_Parents_income correlation_per_school/(8)Nonselective four-year private not-for-profit.png")
-elif option == '(9) Two-year (public and private not for profit)': image = Image.open("img/Kids_Parents_income correlation_per_school/(9) Two-year (public and private not-for-profit).png")
-elif option == '(10) Four-year for profit': image = Image.open("img/Kids_Parents_income correlation_per_school/(10)Four-year for-profit.png")
-elif option == '(11) Two-year for profit': image = Image.open("img/Kids_Parents_income correlation_per_school/(11)Two-year for-profit par mean and k median .png")
-elif option == '(12) Less than two-year schools of any type': image = Image.open("img/Kids_Parents_income correlation_per_school/(12) Less than two-year schools of any type.png")
-elif option == '(13) Attending college with unsufficient data': image = Image.open("img/Kids_Parents_income correlation_per_school/(13)Attending college with unsufficient data.png")
-elif option == '(14) Late attender (23-28)': image = Image.open("img/Kids_Parents_income correlation_per_school/(14) Late attender (23-28).png")
-elif option == '(15) Never attended college (before 2013)': image = Image.open("img/Kids_Parents_income correlation_per_school/(15) Never attender college (before 2013).png")
+if f4option == '(0) All': image = Image.open("img/Kids_Parents_income correlation_per_school/Relationship between Parents Mean Income and Kids Median Income.png")
+elif f4option == '(1) Ivy Plus': image = Image.open("img/Kids_Parents_income correlation_per_school/(1) Ivy Plus.png") 
+elif f4option == '(2) Other elite schools (public and private)': image = Image.open("img/Kids_Parents_income correlation_per_school/(2) Other elite schools (private and public).png")
+elif f4option == '(3) Highly selective public': image = Image.open("img/Kids_Parents_income correlation_per_school/(3)Highly selective public.png")
+elif f4option == '(4) Highly selective private': image = Image.open("img/Kids_Parents_income correlation_per_school/(4) Highly selected private.png")
+elif f4option == '(5) Selective public': image = Image.open("img/Kids_Parents_income correlation_per_school/(5) Selective public.png")
+elif f4option == '(6) Selective private': image = Image.open("img/Kids_Parents_income correlation_per_school/(6) Selective private.png")
+elif f4option == '(7) Nonselective four-year public': image = Image.open("img/Kids_Parents_income correlation_per_school/(7) Nonselective four-year public.png")
+elif f4option == '(8) Nonselective four-year private not for profit': image = Image.open("img/Kids_Parents_income correlation_per_school/(8)Nonselective four-year private not-for-profit.png")
+elif f4option == '(9) Two-year (public and private not for profit)': image = Image.open("img/Kids_Parents_income correlation_per_school/(9) Two-year (public and private not-for-profit).png")
+elif f4option == '(10) Four-year for profit': image = Image.open("img/Kids_Parents_income correlation_per_school/(10)Four-year for-profit.png")
+elif f4option == '(11) Two-year for profit': image = Image.open("img/Kids_Parents_income correlation_per_school/(11)Two-year for-profit par mean and k median .png")
+elif f4option == '(12) Less than two-year schools of any type': image = Image.open("img/Kids_Parents_income correlation_per_school/(12) Less than two-year schools of any type.png")
+elif f4option == '(13) Attending college with unsufficient data': image = Image.open("img/Kids_Parents_income correlation_per_school/(13)Attending college with unsufficient data.png")
+elif f4option == '(14) Late attender (23-28)': image = Image.open("img/Kids_Parents_income correlation_per_school/(14) Late attender (23-28).png")
+elif f4option == '(15) Never attended college (before 2013)': image = Image.open("img/Kids_Parents_income correlation_per_school/(15) Never attender college (before 2013).png")
 
 
 st.image(image, caption="Relationship between Partents Mean Income and Kids Income")
