@@ -88,7 +88,7 @@ that lower income families are less often entering selective universties.
 """
 f4option = st.selectbox(
      'View figure by ',
-     (  '(0) All'
+     (  '(0) All',
         '(1) Ivy Plus', 
         '(2) Other elite schools (public and private)',
         '(3) Highly selective public',
