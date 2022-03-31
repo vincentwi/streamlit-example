@@ -25,12 +25,12 @@ submitted to the United States Internal Revenue Service (IRS) by a student/their
 """
 f1option = st.selectbox(
      'View figure by ',
-     ('Values', 'Percentile'))
+     ("It's Values", "It's Percentiles"))
 
 st.write('You selected:', f1option)
 
-if f1option == 'Values': image = Image.open("img/Post-grad-parent-earning-by-tier.png")
-elif f1option == 'Percentile': image = Image.open("img/Post-Grad Earnings Percinetile by Tier.png")
+if f1option == "It's Values": image = Image.open("img/Post-grad-parent-earning-by-tier.png")
+elif f1option == "It's Percentiles": image = Image.open("img/Post-Grad Earnings Percinetile by Tier.png")
 
 st.image(image, caption="Post Graduation Parent's Earning by Tier") #Image name
 
@@ -46,10 +46,10 @@ f2option = st.selectbox(
      'View figure by ',
      ('Values', 'Percentile'))
 
-st.write('You selected:', f2option)
+st.write("You selected:", f2option)
 
-if f2option == 'Values': image = Image.open("img/Post-grad-earning-by-tier.png")
-elif f2option == 'Percentile': image = Image.open("img/Post-Grad Earnings Percinetile by Tier.png")
+if f2option == "Values": image = Image.open("img/Post-grad-earning-by-tier.png")
+elif f2option == "Percentile": image = Image.open("img/Post-Grad Earnings Percinetile by Tier.png")
 
 st.image(image, caption="Post Graduation Student Earnings by Tier")
 
