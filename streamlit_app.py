@@ -21,14 +21,19 @@ The *70+ million* children<->parent pairs were drawn between 1978-1991 if they a
 filers in the U.S, cross referenced and validated with proof of enrollment via the [1098-T forms](https://www.irs.gov/forms-pubs/about-form-1098-t)
 submitted to the United States Internal Revenue Service (IRS) by a student/their university.
 
-## Figure 1: 
+## Figure 1: Post Graduation Parent's Earning by Tier
 """
 
 image = Image.open("img/Post-grad-parent-earning-by-tier.png")
-st.image(image, caption="Post-grad-parent-earning-by-tier") #Image name
+st.image(image, caption="Post Graduation Parent's Earning by Tier") #Image name
 
 """
-## Figure X: 
+Here we can see that having a strong education, like an Ivy Plus education, creates a large proportion of high income earners.
+Now lets see if the same translates to their children. 
+
+If the parents went to a strong school, what is the income of their children?
+
+## Figure 2: Post Graduation Student Earnings by Tier
 """
 option = st.selectbox(
      'View figure by ',
@@ -38,33 +43,50 @@ st.write('You selected:', option)
 
 if option == 'Values': image = Image.open("img/Post-grad-earning-by-tier.png")
 elif option == 'Percentile': image = Image.open("img/Post-Grad Earnings Percinetile by Tier.png")
-fig = plt.figure()
-plt.imshow(image)
-plt.axis("off")
-st.pyplot(fig)
+
+st.image(image, caption="Post Graduation Student Earnings by Tier")
+
+"""
+## Figure 3:  Relationship between Partents Mean Income and Kids Income
+"""
+option = st.selectbox(
+     'View figure by ',
+     (  '(1) Ivy Plus', 
+        '(2) Other elite schools (public and private)',
+        '(3) Highly selective public',
+        '(4) Highly selective private',
+        '(5) Selective public',
+        '(6) Selective private',
+        '(7) Nonselective four-year public',
+        '(8) Nonselective four-year private not for profit',
+        '(9) Two-year (public and private not for profit)',
+        '(10) Four-year for profit',
+        '(11) Two-year for profit',
+        '(12) Less than two-year schools of any type',
+        '(13) Attending college with unsufficient data',
+        '(14) Late attender (23-28)',
+        '(15) Never attended college (before 2013)'))
+
+st.write('You selected:', option)
+
+if option == '(1) Ivy Plus': image = Image.open("img/") 
+elif option == '(2) Other elite schools (public and private)': image = Image.open("img/")
+elif option == '(3) Highly selective public': image = Image.open("img/")
+elif option == '(4) Highly selective private': image = Image.open("img/")
+elif option == '(5) Selective public': image = Image.open("img/")
+elif option == '(6) Selective private': image = Image.open("img/")
+elif option == '(7) Nonselective four-year public': image = Image.open("img/")
+elif option == '(8) Nonselective four-year private not for profit': image = Image.open("img/")
+elif option == '(9) Two-year (public and private not for profit)': image = Image.open("img/")
+elif option == '(10) Four-year for profit': image = Image.open("img/")
+elif option == '(11) Two-year for profit': image = Image.open("img/")
+elif option == '(12) Less than two-year schools of any type': image = Image.open("img/")
+elif option == '(13) Attending college with unsufficient data': image = Image.open("img/")
+elif option == '(14) Late attender (23-28)': image = Image.open("img/")
+elif option == '(15) Never attended college (before 2013)': image = Image.open("img/Post-grad-earning-by-tier.png")
 
 
-# with st.echo(code_location='below'):
-    # total_points = st.slider("Number of points in spiral", 1, 5000, 2000)
-    # num_turns = st.slider("Number of turns in spiral", 1, 100, 9)
-
-    # Point = namedtuple('Point', 'x y')
-    # data = []
-
-    # points_per_turn = total_points / num_turns
-
-    # for curr_point_num in range(total_points):
-    #     curr_turn, i = divmod(curr_point_num, points_per_turn)
-    #     angle = (curr_turn + 1) * 2 * math.pi * i / points_per_turn
-    #     radius = curr_point_num / total_points
-    #     x = radius * math.cos(angle)
-    #     y = radius * math.sin(angle)
-    #     data.append(Point(x, y))
-
-    # st.altair_chart(alt.Chart(pd.DataFrame(data), height=500, width=500)
-    #     .mark_circle(color='#0068c9', opacity=0.5)
-    #     .encode(x='x:Q', y='y:Q'))
-
+st.image(image, caption="Relationship between Partents Mean Income and Kids Income")
 
 
 
