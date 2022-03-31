@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 """
 # Cross Sectional Child Income Statistics by College Tier and Parent Income Percentile
-### Authors: Vincent Wilmet, Marinie Tao, Alia Haiji
+### Authors: Vincent Wilmet, Marinie Tao, Alia Hajji
 
 Drawing on the data collected by [Opportunity Insights](https://opportunityinsights.org/data/), a research lab at Harvard 
 led by the famous economist [Raj Chetty](https://scholar.google.com/citations?hl=en&user=PhDDPiUAAAAJ&view_op=list_works&sortby=pubdate),
@@ -61,7 +61,7 @@ But why is this? To understand this question, we must look at the student compos
 How many of them are the children of wealthy parents? Are the rich getting richer? Do students from lower income brackets
 have access with equal proportion to those with higher earning parents?. 
 
-## Figure 3: Student Composition by Parent's Income Percentile
+## Figure 3: Student Composition of University Tier by Parent's Income Percentile
 """
     
 image = Image.open("img/Student Comp by Parent Income.png")
