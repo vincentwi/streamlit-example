@@ -23,15 +23,22 @@ submitted to the United States Internal Revenue Service (IRS) by a student/their
 
 ## Figure 1: Post Graduation Parent's Earning by Tier
 """
+option = st.selectbox(
+     'View figure by ',
+     ('Values', 'Percentile'))
 
-image = Image.open("img/Post-grad-parent-earning-by-tier.png")
+st.write('You selected:', option)
+
+if option == 'Values': image = Image.open("img/Post-grad-parent-earning-by-tier.png")
+elif option == 'Percentile': image = Image.open("img/Post-Grad Earnings Percinetile by Tier.png")
+
 st.image(image, caption="Post Graduation Parent's Earning by Tier") #Image name
 
 """
 Here we can see that having a strong education, like an Ivy Plus education, creates a large proportion of high income earners.
 Now lets see if the same translates to their children. 
 
-If the parents went to a strong school, what is the income of their children?
+If the kids go to a strong school, what is their income?
 
 ## Figure 2: Post Graduation Student Earnings by Tier
 """
@@ -47,11 +54,42 @@ elif option == 'Percentile': image = Image.open("img/Post-Grad Earnings Percinet
 st.image(image, caption="Post Graduation Student Earnings by Tier")
 
 """
-## Figure 3:  Relationship between Partents Mean Income and Kids Income
+As shown in the graphic above, we are not surprised. The largest proportion of kids who make 150k+ come from Ivy League schools.
+Much like how the largest proportion of parents earning $500k+ came from Ivy Plus schools as well. 
+
+But why is this? To understand this question, we must look at the student composition of each of these universities.
+How many of them are the children of wealthy parents? Are the rich getting richer? Do students from lower income brackets
+have access with equal proportion to those with higher earning parents?. 
+
+## Figure 3: Student Composition by Parent's Income Percentile
+"""
+    
+image = Image.open("img/Student Comp by Parent Income.png")
+st.image(image, caption="Student Composition by Parent's Income Percentile") #Image name
+
+"""
+Seeing that nearly 60% of the students in an Ivy Plus come from a background where their parents are in the top 10 percentile
+for income earning brackets, we get a better picture of how Ivy Plus schools operate. Similarly, we also understand how the 
+less/non selective schools and education frameworks operate. 
+
+Thanks to the fact the selective schools have roughly 20% or more of their students come from affluent backgrounds, they
+can charge higher tuition costs, which in turn allow for hiring elite educators, research facilities, student dormatories,
+amongst many other quality of learning improvements.
+
+But is there a correlation between the Parents income and that of their kids? Knowing that a very small minority of 
+low income family students compose the student body populatione in the selective schools, will parents from low income
+backgrounds have a low likelihood of getting their kids admitted into these selective schools? And if this is so,
+will it have an impact on the income their kids make? We can make this conclusion from the learnings of Figure (1) and 
+Figure (2) which tell us that students graduating from selective schools will likely have higher income. Let's look
+at the relationship between the Parents income and thier kids, and understanding that implicitly in this is the fact
+that lower income families are less often entering selective universties. 
+
+## Figure 4:  Relationship between Partents Mean Income and Kids Income
 """
 option = st.selectbox(
      'View figure by ',
-     (  '(1) Ivy Plus', 
+     (  '(0) All'
+        '(1) Ivy Plus', 
         '(2) Other elite schools (public and private)',
         '(3) Highly selective public',
         '(4) Highly selective private',
@@ -69,28 +107,71 @@ option = st.selectbox(
 
 st.write('You selected:', option)
 
-if option == '(1) Ivy Plus': image = Image.open("img/") 
-elif option == '(2) Other elite schools (public and private)': image = Image.open("img/")
-elif option == '(3) Highly selective public': image = Image.open("img/")
-elif option == '(4) Highly selective private': image = Image.open("img/")
-elif option == '(5) Selective public': image = Image.open("img/")
-elif option == '(6) Selective private': image = Image.open("img/")
-elif option == '(7) Nonselective four-year public': image = Image.open("img/")
-elif option == '(8) Nonselective four-year private not for profit': image = Image.open("img/")
-elif option == '(9) Two-year (public and private not for profit)': image = Image.open("img/")
-elif option == '(10) Four-year for profit': image = Image.open("img/")
-elif option == '(11) Two-year for profit': image = Image.open("img/")
-elif option == '(12) Less than two-year schools of any type': image = Image.open("img/")
-elif option == '(13) Attending college with unsufficient data': image = Image.open("img/")
-elif option == '(14) Late attender (23-28)': image = Image.open("img/")
-elif option == '(15) Never attended college (before 2013)': image = Image.open("img/Post-grad-earning-by-tier.png")
+if option == '(0) All': image = Image.open("img/Kids_Parents_income correlation_per_school/Relationship between Parents Mean Income and Kids Median Income.png")
+elif option == '(1) Ivy Plus': image = Image.open("img/Kids_Parents_income correlation_per_school/(1) Ivy Plus.png") 
+elif option == '(2) Other elite schools (public and private)': image = Image.open("img/Kids_Parents_income correlation_per_school/(2) Other elite schools (private and public).png")
+elif option == '(3) Highly selective public': image = Image.open("img/Kids_Parents_income correlation_per_school/(3)Highly selective public.png")
+elif option == '(4) Highly selective private': image = Image.open("img/Kids_Parents_income correlation_per_school/(4) Highly selected private.png")
+elif option == '(5) Selective public': image = Image.open("img/Kids_Parents_income correlation_per_school/(5) Selective public.png")
+elif option == '(6) Selective private': image = Image.open("img/Kids_Parents_income correlation_per_school/(6) Selective private.png")
+elif option == '(7) Nonselective four-year public': image = Image.open("img/Kids_Parents_income correlation_per_school/(7) Nonselective four-year public.png")
+elif option == '(8) Nonselective four-year private not for profit': image = Image.open("img/Kids_Parents_income correlation_per_school/(8)Nonselective four-year private not-for-profit.png")
+elif option == '(9) Two-year (public and private not for profit)': image = Image.open("img/Kids_Parents_income correlation_per_school/(9) Two-year (public and private not-for-profit).png")
+elif option == '(10) Four-year for profit': image = Image.open("img/Kids_Parents_income correlation_per_school/(10)Four-year for-profit.png")
+elif option == '(11) Two-year for profit': image = Image.open("img/Kids_Parents_income correlation_per_school/(11)Two-year for-profit par mean and k median .png")
+elif option == '(12) Less than two-year schools of any type': image = Image.open("img/Kids_Parents_income correlation_per_school/(12) Less than two-year schools of any type.png")
+elif option == '(13) Attending college with unsufficient data': image = Image.open("img/Kids_Parents_income correlation_per_school/(13)Attending college with unsufficient data.png")
+elif option == '(14) Late attender (23-28)': image = Image.open("img/Kids_Parents_income correlation_per_school/(14) Late attender (23-28).png")
+elif option == '(15) Never attended college (before 2013)': image = Image.open("img/Kids_Parents_income correlation_per_school/(15) Never attender college (before 2013).png")
 
 
 st.image(image, caption="Relationship between Partents Mean Income and Kids Income")
 
+"""
+Almost always a non zero correlation. 
 
+But lets dig a bit further into the numbers. 
+
+## Figure 5: Colleges with Unsufficient Data   
+"""
+image = Image.open("img/(1) College with unsufficient data.png")
+st.image(image, caption="Colleges with Unsufficient Data Percentile")
+"""
+There seems to be a weak positive relationship between the parents and kids’ income mean. This is strongly influenced by 
+the presence of outliers. Indeed, a possible explanation would be that the kids whose parents went to Ivy League schools,
+tend to earn a significantly higher salary than the kids whose parents are in the same earning's percentile.
+
+## Figure 6: Income Correlation between Kids and Parents income illustrating Kids in the Top 10 Percentile    
+"""
+image = Image.open("img/(2) Income correlation between kids and parents income illustrating kids top 10 percentile.png")
+st.image(image, caption="Income Correlation between Kids and Parents income illustrating Kids in the Top 10 Percentile")
 
 """
+Here we highlight the presence of outliers among kids with high income whose parents earn the least. We further reduced 
+the impact of outliers by using the median measure instead of the mean.
+
+
+## Figure 7: Kids Average income by Parent's School Tier 
+"""
+image = Image.open("img/(3) Kids average income per parent tier schools.png")
+st.image(image, caption="Kids Average income by Parent's School Tier")
+
+"""
+There is an apparent link between kids’ financial situation and parents' education. This is well captured by the gap 
+between the two highest earnings group whose parent went to elite schools and Ivy leagues school and two least earnings 
+group whose parents never attended college or were late attenders. 
+
+
+## Conclusion
+Today we learned a lot about income gaps and the path to education inequality which in turn further increases the income
+inequality. This negative feedback loop is a serious problem and threat to the democratic values of America's educational
+institutions and a potential cause for large population disapproval and distrust.
+
+We strongly suggest a revision to the academic admissions system. Our website is for university admission officers, 
+deans and policy makers in the education domain to understand the impact of cross generational wealth on access to 
+higher education. We show clearly that wealth is a factor and hope that more equitable action gets taken to allow for 
+the disadvantaged to have equal opportunities and higher mobility between economic strata. 
+
 ## Links:
 
 * Code: [github](https://github.com/vincentwi/streamlit-example)
