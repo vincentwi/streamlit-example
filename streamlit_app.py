@@ -65,7 +65,7 @@ have access with equal proportion to those with higher earning parents?.
 """
     
 image = Image.open("img/Student Comp by Parent Income.png")
-st.image(image, caption="Student Composition by Parent's Income Percentile") #Image name
+st.image(image, caption="Student Composition of University Tier by Parent's Income Percentile") #Image name
 
 """
 Seeing that nearly 60% of the students in an Ivy Plus come from a background where their parents are in the top 10 percentile
